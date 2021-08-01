@@ -1,0 +1,87 @@
+body {
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    user-select: none;
+}
+
+.login[theme=dark] {
+    background-color: #000;
+    color: #fff;
+}
+
+.wrapper[theme=dark] {
+    background: #090909;
+}
+
+.login .login-decoration[theme=dark] {
+    background: url(https://media.istockphoto.com/vectors/stairway-to-success-vector-id535480836?b=1&k=6&m=535480836&s=612x612&w=0&h=tTxTTAztBt_Q7xC7EiMpqgQIYL5ln62wcPc08APha7E=);
+}
+
+.login .login-form .form-wrapper .actions .action[theme=dark] {
+    color: black;
+    background-color: white;
+}
+
+.login .login-form[theme=dark] {
+    background-color: #000;
+    color: #fff;
+}
+
+form[theme=dark] {
+    background-color: #000;
+    color: #fff;
+}
+
+body[theme=dark] {
+    background: #000;
+    color: #fff;
+}
+
+#hybrid {
+    visibility: hidden;
+}
+
+#theme-toggle {
+    visibility: hidden;
+}
+
+#theme-toggle+label {
+    content: '';
+    display: inline-block;
+    cursor: pointer;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+#theme-toggle:not(:checked)+label {
+    background-color: gold;
+}
+
+#theme-toggle:checked+label {
+    background-color: transparent;
+    box-shadow: inset -18px -16px 1px 1px #fff;
+}
+
+.intro-text {
+    position: fixed;
+    top: 180px;
+    font-size: 1.6em;
+    font-family: monospace;
+}
+
+[class^=text-] {
+    transition: color 0.2s ease-in-ease-out;
+}
+
+body[theme=dark] .text-sun {
+    color: #222;
+}
+
+body[theme=light] .text-moon {
+    color: #ddd;
+}

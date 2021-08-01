@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Eczar&display=swap");
+
+body,
+html {
+    height: 100%;
+    display: grid;
+    /* background: #00ddcb; */
+    font-family: "Eczar", serif;
+    margin: 0;
+}
+
+body{
+    background:#00C1D4;
+}
+
+a{
+    position: relative;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #f2fedc;
+    top: 460px;
+    margin: 0 2%;
+    right: 16%;
+    font-weight: 400;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.lamp {
+    position: relative;
+    top: 0;
+}
+
+.lamp-cord {
+    width: 5px;
+    height: 100px;
+    background: #efda3c;
+    position: relative;
+}
+
+.lamp-cord:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: -45px;
+    height: 45px;
+    width: 90px;
+    border-top-left-radius: 90px;
+    border-top-right-radius: 90px;
+    background: #efda3c;
+}
+
+.lamp-cord:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: #f2fedc;
+    top: 145px;
+    left: -8px;
+    height: 10px;
+    width: 20px;
+    border-bottom-left-radius: 90px;
+    border-bottom-right-radius: 90px;
+}
+
+.lamp-switch {
+    position: absolute;
+    top: 145px;
+    left: 18px;
+}
+
+.lamp-switch:before {
+    content: "";
+    display: block;
+    position: relative;
+    height: 150px;
+    width: 2px;
+    background: #efda3c;
+    top: 0;
+    left: 25px;
+}
+
+label {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+span {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2a2d30;
+    transition: 0.4s;
+    border-radius: 34px;
+    transform: rotate(90deg);
+}
+
+span:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4.5px;
+    bottom: 5.5px;
+    background-color: #f2fedc;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked+span {
+    background-color: #efda3c;
+}
+
+input:focus+span {
+    box-shadow: 0 0 1px #f6f1b5;
+}
+
+input:checked+span:before {
+    transform: translateX(26px);
+}
+
+.dark-mode {
+    background: #42434a;
+}
+
+.dark-mode .lamp-switch:before {
+    background: #7a7174;
+}
+
+.dark-mode .lamp-cord {
+    background: #7a7174;
+}
+
+.dark-mode .lamp-cord:before {
+    background: #7a7174;
+}
+
+.dark-mode .lamp-cord:after {
+    background: #f1dc42;
+    box-shadow: 4px 17px 40px 20px #f1dc42;
+}
+
+.dark-mode span {
+    background: #7a7174;
+}
+
+.dark-mode span:before {
+    background: #42434a;
+}
+
+.dark-mode h1 {
+    color: #7a7174;
+}
+
+h1 {
+    position: absolute;
+    top: 325px;
+    color: #f2fedc;
+}
